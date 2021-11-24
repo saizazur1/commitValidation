@@ -12,6 +12,7 @@ on:
       - edited
       - reopened
       - synchronize
+
 jobs:
   check-commit-message:
     name: Check Commit Message
@@ -20,6 +21,6 @@ jobs:
       - name: Check Commit Type
         uses: gsactions/commit-message-checker@v1
         with:
-          pattern: '(?:FIX|DOCS|FEAT|TASK): .+ \(Ticket #.+\)$'
+          pattern: '(?:FIX|DOCS|FEAT|TASK|RELEASE): .+$'
           flags: 'gm'
-          error: 'Your first line has to contain a commit type like "FIX: Myfirst Commit (Ticket #123)".'
+          error: 'Your first line has to contain a commit type like "FIX: Myfirst Commit".'
