@@ -23,4 +23,4 @@ jobs:
         with:
           pattern: '(?:FIX|DOCS|FEAT|TASK|RELEASE): .+$'
           flags: 'gm'
-          error: 'Your first line has to contain a commit type like "FIX: Myfirst Commit (Ticket #123)".'
+          error: 'Your first line has to contain a commit type like "FIX: Myfirst Commit".'
