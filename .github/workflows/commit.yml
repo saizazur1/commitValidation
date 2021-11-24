@@ -12,7 +12,10 @@ on:
       - edited
       - reopened
       - synchronize
-
+  push:
+    branches:
+      - develop
+      - 'releases/*'
 jobs:
   check-commit-message:
     name: Check Commit Message
