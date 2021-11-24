@@ -24,3 +24,9 @@ jobs:
           pattern: '(?:FIX|DOCS|FEAT|TASK|RELEASE): .+$'
           flags: 'gm'
           error: 'Your first line has to contain a commit type like "FIX: Myfirst Commit".'
+      - name: Close Pull
+        uses: peter-evans/close-pull@v1
+        with:
+          pull-request-number: 1
+          comment: Auto-closing pull request
+          delete-branch: true
