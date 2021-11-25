@@ -11,8 +11,4 @@ jobs:
       - name: Commitsar check
         uses: aevea/commitsar@v0.11.0
       - name: Close Pull
-        uses: peter-evans/close-pull@v1
-        with:
-          pull-request-number: 1
-          comment: Auto-closing pull request
-          delete-branch: false
+        uses: superbrothers/close-pull-request@v3
