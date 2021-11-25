@@ -23,6 +23,8 @@ jobs:
         with:
           pattern: '(?:FIX|DOCS|FEAT|TASK|RELEASE): .+$'
           flags: 'gm'
+          excludeDescription: 'true'
+          excludeTitle: 'true'
           error: 'Your first line has to contain a commit type like "FIX: Myfirst Commit".'
       - name: Close Pull
         uses: peter-evans/close-pull@v1
