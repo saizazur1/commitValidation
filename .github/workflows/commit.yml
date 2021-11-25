@@ -6,13 +6,6 @@ on:
       - edited
       - reopened
       - synchronize
-  pull_request_target:
-    types:
-      - opened
-      - edited
-      - reopened
-      - synchronize
-
 jobs:
   check-commit-message:
     name: Check Commit Message
@@ -23,10 +16,6 @@ jobs:
         with:
           pattern: '(?:FIX|DOCS|FEAT|TASK|RELEASE): .+$'
           flags: 'gm'
+          excludeDescription: 'true'
+          excludeTitle: 'true'
           error: 'Your first line has to contain a commit type like "FIX: Myfirst Commit".'
-      - name: Close Pull
-        uses: peter-evans/close-pull@v1
-        with:
-          pull-request-number: 1
-          comment: Auto-closing pull request
-          delete-branch: true
